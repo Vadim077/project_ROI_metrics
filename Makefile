@@ -1,4 +1,4 @@
-.PHONY: run test check clean
+.PHONY: run test check clean compose-up compose-down
 
 run:
 	python -m app.cli.main tests/fixtures/sample_data.json
@@ -10,3 +10,9 @@ check: test run
 
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +
+
+compose-up:
+	docker compose -f infra/compose.yaml run --rm ads-calculator
+
+compose-down:
+	docker compose -f infra/compose.yaml down -v
