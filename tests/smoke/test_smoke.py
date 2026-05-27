@@ -3,7 +3,7 @@ import unittest
 
 class TestSmokeMain(unittest.TestCase):
     def test_main_runs_without_errors(self):
-        result = subprocess.run(["python", "main.py", "tests/fixtures/sample_data.json"], capture_output=True, text=True)
+        result = subprocess.run(["python", "app/cli/main.py", "tests/fixtures/sample_data.json"], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0)
         self.assertIn("Ads Metrics Report", result.stdout)
 
