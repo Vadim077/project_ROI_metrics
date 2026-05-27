@@ -1,0 +1,7 @@
+services:
+  ads-calculator:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: ads-metrics-calculator:local
+    profiles: ["cli"]
