@@ -1,5 +1,5 @@
 import unittest
-from packages.core.metrics import calculate_roi, calculate_cr
+from packages.core.metrics import calculate_roi, calculate_cr, calculate_profit
 
 class TestMetrics(unittest.TestCase):
     def test_calculate_roi_positive(self):
@@ -12,6 +12,9 @@ class TestMetrics(unittest.TestCase):
 
     def test_calculate_cr_zero_clicks(self):
         self.assertEqual(calculate_cr(10, 0), 0.0)
+
+    def test_calculate_profit_standard(self):
+        self.assertEqual(calculate_profit(1500, 500), 1000.0)
 
 if __name__ == "__main__":
     unittest.main()

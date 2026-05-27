@@ -12,3 +12,5 @@ def calculate_cr(leads: int, clicks: int) -> float:
         return 0.0
     return (leads / clicks) * 100
 
+def calculate_profit(revenue: float, cost: float) -> float:
+    return revenue - cost
