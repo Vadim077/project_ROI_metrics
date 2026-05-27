@@ -1,0 +1,7 @@
+{
+  "campaigns": [
+    {"network": "Leadgid", "clicks": 1500, "leads": 45, "cost": 300.0, "revenue": 950.0},
+    {"network": "Mitgo", "clicks": 800, "leads": 0, "cost": 150.0, "revenue": 0.0},
+    {"network": "Shakes.pro", "clicks": 2300, "leads": 120, "cost": 800.0, "revenue": 1400.0}
+  ]
+}
