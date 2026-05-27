@@ -1,0 +1,5 @@
+flowchart LR
+    User[Reviewer] --> CLI[app/cli/main.py]
+    CLI --> Core[packages/core/metrics.py]
+    CLI --> File[(sample_data.json)]
+    Core --> CLI
