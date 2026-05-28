@@ -1,0 +1,4 @@
+coverage==7.4.4
+sphinx==7.2.6
+build==1.2.1
+twine==5.0.0

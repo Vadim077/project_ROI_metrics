@@ -7,3 +7,9 @@ env/
 venv/
 .venv/
 .env
+htmlcov/
+.coverage
+build/
+dist/
+*.egg-info/
+docs_sphinx/_build/

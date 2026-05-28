@@ -23,3 +23,15 @@ build-lib:
 
 install-lib-local:
 	pip install -e .
+
+coverage:
+	coverage run -m unittest discover -s tests
+	coverage html
+	@echo "HTML отчет сгенерирован в папке htmlcov/index.html"
+
+docs-sphinx:
+	sphinx-build -b html docs_sphinx docs_sphinx/_build/html
+	@echo "Документация Sphinx сгенерирована в docs_sphinx/_build/html"
+
+publish-lib: build-lib
+	python -m twine upload --repository testpypi dist/*
