@@ -6,4 +6,6 @@ build-backend = "setuptools.build_meta"
 name = "ads-metrics-core"
 version = "0.1.0"
 description = "Pure domain logic for calculating ads metrics"
-packages = ["packages.core"]
+
+[tool.setuptools]
+packages = ["packages", "packages.core"]
