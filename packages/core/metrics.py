@@ -2,7 +2,7 @@ def calculate_roi(revenue: float, cost: float) -> float:
     if cost < 0:
         raise ValueError("Cost cannot be negative")
     if cost == 0:
-        return 0.0
+        raise ValueError("Cost is zero: potential tracking anomaly")
     return (revenue - cost) / cost * 100
 
 def calculate_cr(leads: int, clicks: int) -> float:
