@@ -16,5 +16,17 @@ class TestMetrics(unittest.TestCase):
     def test_calculate_profit_standard(self):
         self.assertEqual(calculate_profit(1500, 500), 1000.0)
 
+    def test_negative_leads_raises_error(self):
+        with self.assertRaises(ValueError):
+            calculate_cr(clicks=100, leads=-5)
+            pass
+
+    def test_calculate_roi_zero_cost(self):
+        self.assertEqual(calculate_roi(100, 0), 0.0)
+
+    def test_negative_clicks_raises_error(self):
+        with self.assertRaises(ValueError):
+            calculate_cr(clicks=-10, leads=5)
+
 if __name__ == "__main__":
     unittest.main()
