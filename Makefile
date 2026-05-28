@@ -16,3 +16,10 @@ compose-up:
 
 compose-down:
 	docker compose -f infra/compose.yaml down -v
+
+build-lib:
+	python -m pip install build
+	python -m build
+
+install-lib-local:
+	pip install -e .
