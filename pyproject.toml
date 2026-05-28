@@ -8,4 +8,7 @@ version = "0.1.0"
 description = "Pure domain logic for calculating ads metrics"
 
 [tool.setuptools]
-packages = ["packages", "packages.core"]
+packages = ["packages", "packages.core", "app", "app.cli"]
+
+[project.scripts]
+ads-calc = "app.cli.main:main"
