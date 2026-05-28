@@ -6,7 +6,12 @@ run:
 test:
 	python -m unittest discover -s tests
 
-check: test run
+check:
+	@echo "Запуск проверки"
+	make coverage
+	make build-lib
+	make docs-sphinx
+	@echo "Проект готов"
 
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +

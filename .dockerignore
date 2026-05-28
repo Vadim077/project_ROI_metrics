@@ -1,6 +1,12 @@
 .git
+.gitignore
+.venv
 __pycache__
 *.pyc
-*.pyo
-venv
-.venv
+tests/
+docs/
+docs_sphinx/
+infra/
+.codex/
+Makefile
+README.md
